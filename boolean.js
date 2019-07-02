@@ -38,54 +38,52 @@ const IMP = (boolLeft, boolRight) => boolLeft(boolRight, TRUE); // comparar con 
 
 const ifElse = (boolValue, fnTRUE, fnFALSE) => boolValue(fnTRUE, fnFALSE)();
 
-
 const XOR2 = (boolLeft, boolRight) => boolLeft(boolRight(FALSE, TRUE), boolRight); // comparar con EQU()
 
+console.log("LOG T  ", valueOf(TRUE));
+console.log("LOG F  ", valueOf(FALSE));
+console.log("");
 
-console.log('LOG T  ', valueOf(TRUE));
-console.log('LOG F  ', valueOf(FALSE));
-console.log('');
+console.log("VAL T  ", valueOf(MakeBool(true)));
+console.log("VAL F  ", valueOf(MakeBool(false)));
+console.log("");
 
-console.log('VAL T  ', valueOf(MakeBool(true)));
-console.log('VAL F  ', valueOf(MakeBool(false)));
-console.log('');
+console.log("NOT T  ", valueOf(NOT(TRUE)));
+console.log("NOT F  ", valueOf(NOT(FALSE)));
+console.log("");
 
-console.log('NOT T  ', valueOf(NOT(TRUE)));
-console.log('NOT F  ', valueOf(NOT(FALSE)));
-console.log('');
+console.log("AND T T", valueOf(AND(TRUE, TRUE)));
+console.log("AND T F", valueOf(AND(TRUE, FALSE)));
+console.log("AND F T", valueOf(AND(FALSE, TRUE)));
+console.log("AND F F", valueOf(AND(FALSE, FALSE)));
+console.log("");
 
-console.log('AND T T', valueOf(AND(TRUE, TRUE)));
-console.log('AND T F', valueOf(AND(TRUE, FALSE)));
-console.log('AND F T', valueOf(AND(FALSE, TRUE)));
-console.log('AND F F', valueOf(AND(FALSE, FALSE)));
-console.log('');
+console.log("OR  T T", valueOf(OR(TRUE, TRUE)));
+console.log("OR  T F", valueOf(OR(TRUE, FALSE)));
+console.log("OR  F T", valueOf(OR(FALSE, TRUE)));
+console.log("OR  F F", valueOf(OR(FALSE, FALSE)));
+console.log("");
 
-console.log('OR  T T', valueOf(OR(TRUE, TRUE)));
-console.log('OR  T F', valueOf(OR(TRUE, FALSE)));
-console.log('OR  F T', valueOf(OR(FALSE, TRUE)));
-console.log('OR  F F', valueOf(OR(FALSE, FALSE)));
-console.log('');
+console.log("XOR T T", valueOf(XOR(TRUE, TRUE)));
+console.log("XOR T F", valueOf(XOR(TRUE, FALSE)));
+console.log("XOR F T", valueOf(XOR(FALSE, TRUE)));
+console.log("XOR F F", valueOf(XOR(FALSE, FALSE)));
+console.log("");
 
-console.log('XOR T T', valueOf(XOR(TRUE, TRUE)));
-console.log('XOR T F', valueOf(XOR(TRUE, FALSE)));
-console.log('XOR F T', valueOf(XOR(FALSE, TRUE)));
-console.log('XOR F F', valueOf(XOR(FALSE, FALSE)));
-console.log('');
+console.log("EQU T T", valueOf(EQU(TRUE, TRUE)));
+console.log("EQU T F", valueOf(EQU(TRUE, FALSE)));
+console.log("EQU F T", valueOf(EQU(FALSE, TRUE)));
+console.log("EQU F F", valueOf(EQU(FALSE, FALSE)));
+console.log("");
 
-console.log('EQU T T', valueOf(EQU(TRUE, TRUE)));
-console.log('EQU T F', valueOf(EQU(TRUE, FALSE)));
-console.log('EQU F T', valueOf(EQU(FALSE, TRUE)));
-console.log('EQU F F', valueOf(EQU(FALSE, FALSE)));
-console.log('');
+console.log("IMP T T", valueOf(IMP(TRUE, TRUE)));
+console.log("IMP T F", valueOf(IMP(TRUE, FALSE)));
+console.log("IMP F T", valueOf(IMP(FALSE, TRUE)));
+console.log("IMP F F", valueOf(IMP(FALSE, FALSE)));
+console.log("");
 
-console.log('IMP T T', valueOf(IMP(TRUE, TRUE)));
-console.log('IMP T F', valueOf(IMP(TRUE, FALSE)));
-console.log('IMP F T', valueOf(IMP(FALSE, TRUE)));
-console.log('IMP F F', valueOf(IMP(FALSE, FALSE)));
-console.log('');
-
-ifElse(TRUE, x => console.log('SOY CIERTO'), x => console.log('SOY FALSO'));
-ifElse(FALSE, x => console.log('SOY CIERTO'), x => console.log('SOY FALSO'));
+ifElse(TRUE, x => console.log("SOY CIERTO"), x => console.log("SOY FALSO"));
+ifElse(FALSE, x => console.log("SOY CIERTO"), x => console.log("SOY FALSO"));
 
 // duda existencial... tiene que terminar ifElse() invocando a la función resultado?
 // o debería ser

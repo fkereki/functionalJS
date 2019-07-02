@@ -15,7 +15,7 @@ const tupleFromArray = arr => NewTuple(...arr);
 const tupleToArray = tuple => tuple((...args) => [...args]);
 
 const tupleGetNth = (tuple, n) =>
-    tuple((...args) => (0 <= n && n < args.length ? args[n] : tupleError('PLACE DOES NOT EXIST')));
+    tuple((...args) => (0 <= n && n < args.length ? args[n] : tupleError("PLACE DOES NOT EXIST")));
 
 const tupleSetNth = (tuple, n, value) =>
     tuple((...args) => {
@@ -24,7 +24,7 @@ const tupleSetNth = (tuple, n, value) =>
             myArgs[n] = value;
             return NewTuple(...myArgs);
         } else {
-            tupleError('WRONG PLACE IN TUPLE');
+            tupleError("WRONG PLACE IN TUPLE");
         }
     });
 
@@ -49,7 +49,7 @@ const myTuple2 = NewTuple(22, 9, 60, 12, 4, 56);
 const myTuple3 = NewTuple(24, 11, 63);
 const myTuple4 = NewTupleBySize(5);
 
-console.log('Get NTH');
+console.log("Get NTH");
 console.log(tupleGetNth(myTuple1, 0));
 console.log(tupleGetNth(myTuple1, 1));
 console.log(tupleGetNth(myTuple1, 2));
@@ -58,18 +58,18 @@ console.log(tupleGetNth(myTuple1, 4));
 console.log(tupleGetNth(myTuple1, 5));
 // console.log(tupleGetNth(myTuple1, 6));
 
-console.log('LENGTH');
+console.log("LENGTH");
 console.log(tupleSize(myTuple0));
 console.log(tupleSize(myTuple1));
 
-console.log('TO ARRAY');
+console.log("TO ARRAY");
 console.log(tupleToArray(myTuple0));
 console.log(tupleToArray(myTuple1));
 console.log(tupleToArray(myTuple2));
 console.log(tupleToArray(myTuple3));
 console.log(tupleToArray(myTuple4));
 
-console.log('EQUALS');
+console.log("EQUALS");
 console.log(tupleEquals(myTuple0, myTuple0));
 console.log(tupleEquals(myTuple0, myTuple1));
 console.log(tupleEquals(myTuple0, myTuple2));
@@ -79,11 +79,11 @@ console.log(tupleEquals(myTuple1, myTuple1));
 console.log(tupleEquals(myTuple1, myTuple2));
 console.log(tupleEquals(myTuple1, myTuple3));
 
-console.log('SET NTH');
-console.log(tupleToArray(tupleSetNth(myTuple1, 2, 'FEFK')));
+console.log("SET NTH");
+console.log(tupleToArray(tupleSetNth(myTuple1, 2, "FEFK")));
 // console.log(tupleToArray(tupleSetNth(6, "FEFK", myTuple1)));
 
-console.log('MAP');
+console.log("MAP");
 console.log(tupleToArray(tupleMap(myTuple1, x => x + 1000)));
 console.log(tupleToArray(tupleFilter(myTuple1, x => x % 2 == 0)));
 console.log(tupleReduce(myTuple1, (x, y) => x + y, 20000));
