@@ -1,10 +1,6 @@
 import { NewPair, pairLeft, pairRight, pairSwap, pairToArray } from "./pair";
 
-// TESTS /////////////////////////////////////////////////////////////////////
-
-// const pairLog = pair => console.log(pairToArray(pair));
-
-describe("Pair", () => {
+describe("Pair creation and access", () => {
     it("pairLeft and pairRight accesors should work", () => {
         const pair = NewPair(22, 9);
         expect(pairLeft(pair)).toBe(22);
@@ -19,11 +15,11 @@ describe("Pair", () => {
 
     it("pairToArray should produce an array", () => {
         const arr = pairToArray(NewPair(22, 9));
-        expect(arr.length).toBe(2);
-        expect(arr[0]).toBe(22);
-        expect(arr[1]).toBe(9);
+        expect(arr).toEqual([22, 9]);
     });
 });
+
+describe("Pair modification", () => {});
 
 /*
 pairLog(pairSetFirst1(pair, 222)); // [222, 9]
