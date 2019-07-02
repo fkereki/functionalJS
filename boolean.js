@@ -16,8 +16,8 @@ so valuable is that it actually fits into the broader context of lambda calculus
 which is a mathematical abstraction of computation.
 */
 
-const TRUE = (trueValue, __) => trueValue;
-const FALSE = (__, falseValue) => falseValue;
+const TRUE = (trueValue, falseValue) => trueValue;
+const FALSE = (trueValue, falseValue) => falseValue;
 
 const MakeBool = value => (value ? TRUE : FALSE);
 const valueOf = boolValue => boolValue(true, false);

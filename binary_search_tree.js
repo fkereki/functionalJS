@@ -1,3 +1,5 @@
+// should be NewTree ?
+
 const Tree = (value, left, right) => (f, __) => f(value, left, right);
 
 const EmptyTree = () => (__, g) => g();
@@ -21,7 +23,7 @@ const treeToObject1 = tree =>
 const treeToObject2 = tree =>
     tree(
         (value, left, right) => {
-            const result = { value };
+            let result = { value };
             const leftBranch = treeToObject2(left);
             if (leftBranch) {
                 result.left = leftBranch;

@@ -1,0 +1,37 @@
+{
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.4.4",
+        "@babel/preset-env": "^7.4.5",
+        "babel-core": "^6.26.3",
+        "eslint": "^6.0.1",
+        "jest": "^24.8.0"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ],
+        "plugins": [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4
+    },
+    "eslintConfig": {
+        "parserOptions": {
+            "ecmaVersion": 2019,
+            "sourceType": "module"
+        },
+        "env": {
+            "browser": true,
+            "es6": true,
+            "jest": true,
+            "node": true
+        },
+        "extends": "eslint:recommended"
+    }
+}
