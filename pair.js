@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 /*
     Constructor functions
     NewPair creates a new pair, given its left (first) and right (second) values
