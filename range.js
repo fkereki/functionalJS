@@ -1,3 +1,8 @@
+const rangeN = (start, stop) => new Array(stop - start).fill(0).map((v, i) => start + i);
+
+const range2 = (start, stop, step = Math.sign(stop - start)) =>
+    new Array(Math.ceil((stop - start) / step)).fill(0).map((v, i) => start + i * step);
+
 const rangeI = (from, to, step = 1) => {
     let value = from - step;
     return {
