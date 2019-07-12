@@ -1,4 +1,4 @@
-const once = func => {
+export const once = func => {
     let done = false;
     return (...args) => {
         if (!done) {
@@ -8,7 +8,7 @@ const once = func => {
     };
 };
 
-const once2 = func => {
+export const once2 = func => {
     let done = false;
     let result;
     return (...args) => {
