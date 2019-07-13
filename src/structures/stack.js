@@ -21,10 +21,12 @@ export const Stack = (...args) => (args.length ? NewStack(args[0], Stack(...args
 export const StackFromArray = arr => (arr && arr.length ? Stack(...arr) : EmptyStack());
 
 /*
+    Alternatives:
+
     Stack3 and Stack4 are "lazy"; the rest of the stack doesn't get created until needed
 
-const Stack3 = (...args) => (args.length ? (f, g) => f(args[0], Stack3(...args.slice(1))) : EmptyStack());
-const Stack4 = (...args) => (f, g) => (args.length ? f(args[0], Stack4(...args.slice(1))) : g());
+    const Stack3 = (...args) => (args.length ? (f, g) => f(args[0], Stack3(...args.slice(1))) : EmptyStack());
+    const Stack4 = (...args) => (f, g) => (args.length ? f(args[0], Stack4(...args.slice(1))) : g());
 */
 
 /*

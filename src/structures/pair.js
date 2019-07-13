@@ -27,6 +27,8 @@ export const pairSetFirst = (pair, value) => NewPair(value, pairRight(pair));
 export const pairSetSecond = (pair, value) => NewPair(pairLeft(pair), value);
 
 /*
+Alternatives:
+
 // expanding the definition of the pairRight/pairLeft calls in the previous definitions
 const pairSetFirst2 = (pair, value) => NewPair(value, pair((l, r) => r));
 const pairSetSecond2 = (pair, value) => NewPair(pair((l, r) => l), value);
