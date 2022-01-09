@@ -23,7 +23,7 @@ const treeToObject1 = tree =>
 const treeToObject2 = tree =>
     tree(
         (value, left, right) => {
-            let result = { value };
+            const result = { value };
             const leftBranch = treeToObject2(left);
             if (leftBranch) {
                 result.left = leftBranch;
